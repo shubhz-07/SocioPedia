@@ -1,0 +1,35 @@
+dotenv file:- a .env file is a convenient way to store environment-specific variables, such as API keys and database passwords, in a simple text file. This enables you to manage sensitive information consistently while maintaining its security. This file stores info in Key-value pairs.
+
+The HyperText Transfer Protocol (HTTP) 500 Internal Server Error server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
+
+404 Not Found:
+The 404 status code indicates that the server could not find the requested resource. This typically occurs when the URL or endpoint provided in the client's request does not correspond to a valid resource on the server. It can also indicate that the resource existed at some point but has been deleted or moved. The server may include a custom error message or a default "Not Found" message in the response body to provide additional information.
+
+409 Conflict:
+The 409 status code indicates that the request could not be completed due to a conflict with the current state of the target resource. This typically occurs in scenarios involving resource conflicts, such as concurrent modifications or violations of business rules. For example, if two clients try to update the same resource simultaneously, the server may respond with a 409 status code to indicate the conflict. The response may include additional details about the conflict in the response body
+
+npm start: This is a predefined script in npm that is commonly used to start a Node.js.
+npm run: This is a command that allows you to run custom scripts defined in the "scripts" section of your package.json file. 
+
+req.params allows you to extract parameters from the URL, 
+req.body is used to access data sent in the request body.
+
+react-dropzone :- it will be handle file upload on frontend , so that it could be sent to backend
+react-persist :- is mainly used to store data locally on user data, if a user quits his browser so data must be present on his local machine.
+
+                       // JSCONFIG FILE INFORMATION
+"compilerOptions": This section specifies the compiler options for TypeScript.
+
+"baseUrl": "src": This option sets the base directory for module resolution. It defines that all module imports should be resolved relative to the "src" directory.
+"include": This section specifies which files or directories should be included for TypeScript compilation.
+
+["src"]: It includes all files and directories within the "src" directory for compilation.
+In summary, this tsconfig.json configuration sets the base directory for module resolution to "src". It also includes all files and directories within the "src" directory for TypeScript compilation. This configuration is useful when you want to organize your TypeScript source code within the "src" directory and have module imports resolved relative to that directory.
+
+
+//REDUX REDUCERS
+In Redux, reducers are pure functions that specify how the application's state should change in response to dispatched actions. They take the current state and an action as input and return a new state object that reflects the desired changes.
+setPosts: Updates the posts property with the array of posts provided in the payload of the action.
+setPost: Updates a specific post within the posts array based on the post_id provided in the payload of the action.
+
+Formik is designed to manage forms with complex validation with ease. Formik supports synchronous and asynchronous form-level and field-level validation. Furthermore, it comes with baked-in support for schema-based form-level validation through Yup.
