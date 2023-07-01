@@ -7,7 +7,6 @@ import {
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import Friend from "components/Friend";
-import UserImage from "components/UserImage";
 import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,9 +43,7 @@ const OnePostWidget = ({
       },
       body: JSON.stringify({ userId: loggedInUserId }),
     });
-    console.log(response);
     const updatedPost = await response.json();
-    console.log(updatedPost);
     dispatch(setPost({ post: updatedPost }));
   };
 
@@ -70,7 +67,6 @@ const OnePostWidget = ({
           src={`http://localhost:3001/assets/${picturePath}`}
         />
       )}
-
       <FlexBetween mt="0.25rem">
         <FlexBetween gap="1rem">
           <FlexBetween gap="0.3rem">
