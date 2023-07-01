@@ -52,19 +52,9 @@
 <!-- <img src="Screenshots/Setup_Trip.jpeg" height="440"> -->
 </p>
 
-- Checkout details for current order assigned to Service Provider
-<p align="center">
-<img src="Screenshots/Service_provider_status.png" height="440">
-</p>
 
-## Receiver Section
 
-- Checkout Package Details
 
-<p align="center">
-<img src="Screenshots/Receiver_Onboarding.png" height="440">
-<img src="Screenshots/Receiver_Package_Details.jfif" height="440">
-</p>
 
 ## Features
 
