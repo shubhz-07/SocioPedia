@@ -1,11 +1,14 @@
 import Post from "../models/Post.js";
+import User from "../models/User.js";
 
 //Create
 
 export const createPost = async (req, res) => {
   try {
     const { userId, description, picturePath } = req.body;
+    console.log("sudesh");
     const user = await User.findById(userId);
+    console.log(user);
     const newPost = new Post({
       userId,
       firstName: user.firstName,
@@ -22,7 +25,7 @@ export const createPost = async (req, res) => {
     const post = await Post.find();
     res.status(201).json(post); //201 is just we have created something
   } catch (error) {
-    res.status(409).json({ message: error.message });
+    res.status(409).json({ message: error });
   }
 };
 
@@ -76,13 +79,11 @@ export const likePost = async (req, res) => {
 };
 
 //Post
-export const CommentPost = async (req,res) => {
+export const CommentPost = async (req, res) => {
   try {
     const { id } = req.params;
     const { userId } = req.body;
 
     const post = await Post.findById(id);
-  } catch (error) {
-    
-  }
-}
+  } catch (error) {}
+};

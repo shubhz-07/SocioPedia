@@ -49,12 +49,16 @@ const OnePostWidget = ({
 
   return (
     <WidgetWrapper m="2rem 0">
-      <Friend
+      {/* <Friend
         friendId={postUserId}
         name={name}
         subtitle={location}
         userPicturePath={userPicturePath}
-      />
+      /> */}
+      {/* <Typography color={main}>{name}</Typography> */}
+      <Typography color={main} fontSize="5" fontWeight="bold">
+        {name}
+      </Typography>
       <Typography color={main} sx={{ mt: "1rem" }}>
         {description}
       </Typography>

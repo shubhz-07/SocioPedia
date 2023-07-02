@@ -8,6 +8,7 @@ import FriendListWidget from "scenes/widgets/FriendListWidget";
 import MyPostWidget from "scenes/widgets/MyPostWidget";
 import PostsWidget from "scenes/widgets/PostsWidget";
 import UserWidget from "scenes/widgets/UserWidget";
+import OnePostWidget from "scenes/widgets/OnePostWidget";
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -21,6 +22,7 @@ const ProfilePage = () => {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
+
     setUser(data);
   };
 
@@ -50,7 +52,8 @@ const ProfilePage = () => {
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <MyPostWidget picturePath={user.picturePath} />
-          {/* <PostsWidget userId={userId} /> */}
+          <Box m="2rem 0" />
+          <PostsWidget userId={userId} isProfile />
         </Box>
       </Box>
     </Box>

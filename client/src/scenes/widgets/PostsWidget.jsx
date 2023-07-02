@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
-import PostWidget from "./OnePostWidget";
+// import PostWidget from "./OnePostWidget";
+import OnePostWidget from "./OnePostWidget";
 
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
+    console.log(data);
     dispatch(setPosts({ posts: data }));
   };
 
@@ -53,7 +55,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
             likes,
             comments,
           }) => (
-            <PostWidget
+            <OnePostWidget
               key={_id}
               postId={_id}
               postUserId={userId}

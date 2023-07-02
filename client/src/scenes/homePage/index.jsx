@@ -6,10 +6,15 @@ import MyPostWidget from "scenes/widgets/MyPostWidget";
 import PostsWidget from "scenes/widgets/PostsWidget";
 import AdvertWidget from "scenes/widgets/AdvertWidget";
 import FriendListWidget from "scenes/widgets/FriendListWidget";
+import { useEffect } from "react";
 
 const HomePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const { _id, picturePath } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    console.log(picturePath);
+  }, []);
 
   return (
     <Box>
@@ -21,7 +26,6 @@ const HomePage = () => {
         gap="0.5rem"
         justifyContent="space-between"
       >
-        
         <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
           <UserWidget userId={_id} picturePath={picturePath} />
         </Box>
@@ -30,7 +34,7 @@ const HomePage = () => {
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <MyPostWidget picturePath={picturePath} />
-      
+
           <PostsWidget userId={_id} />
         </Box>
         {isNonMobileScreens && (
