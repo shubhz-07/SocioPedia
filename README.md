@@ -61,6 +61,13 @@ The Login page is the gateway to the social media platform, where users can secu
 <img src="Screenshots/7.png" height="440">
 </p>
 
+## Advertisement Widget
+
+- The Advertisement widget on "SOCIOPEDIA" showcases targeted ads to users, delivering relevant content and promotions that align with their interests. It enhances user engagement and provides advertising opportunities for businesses to reach a wider audience within the social media platform.
+<p align="center">
+<img src="Screenshots/10.png" height="440">
+</p>
+
 ## Features
 
 - Connect and Share: Easily connect with friends, family, and colleagues and share your thoughts, photos, and videos in real-time.
